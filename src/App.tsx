@@ -1,9 +1,9 @@
-import Register from "./pages/Register";
+import TutorDashboard from "./pages/TutorDashboard";
 
 function App() {
     return (
         <div className="w-full">
-            <Register />
+            <TutorDashboard />
         </div>
     );
 }
