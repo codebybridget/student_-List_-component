@@ -1,0 +1,51 @@
+import Button from "../ui/Button";
+import Input from "../ui/Input";
+
+const SignUp = () => {
+    return (
+        <form action="" className="flex flex-col space-y-3 mt-5">
+            <Input
+                labelName="Full Name"
+                inputType="text"
+                placeholder="Enter your Full Name"
+            />
+            <Input
+                labelName="Email Address"
+                inputType="email"
+                placeholder="Enter your email"
+            />
+            <Input
+                labelName="Password"
+                inputType="password"
+                placeholder="Enter your password"
+            />
+            <div>
+                <p>I am a :</p>
+                <div className="flex space-x-3">
+                    <p>
+                        <input type="radio" name="userType" id="tutor" /> Tutor
+                    </p>
+                    <p>
+                        <input type="radio" name="userType" id="student" />{" "}
+                        Student
+                    </p>
+                </div>
+            </div>
+            <div>
+                <Button style="text-white bg-blue-600">
+                    <span> Sign Up</span>
+                </Button>
+            </div>
+            <div>
+                <p className="text-sm text-gray-500 text-center">
+                    Already have an account?{" "}
+                    <a href="" className="text-blue-400 underline">
+                        Sign in here
+                    </a>
+                </p>
+            </div>
+        </form>
+    );
+};
+
+export default SignUp;
