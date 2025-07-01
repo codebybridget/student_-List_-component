@@ -1,7 +1,12 @@
+// import { useState } from "react";
 import Button from "../ui/Button";
 import Input from "../ui/Input";
 
 const SignIn = () => {
+    // const[email, setEmail] = useState("");
+    // const [password, setPassword] = useState("");
+    // const [userType, setUserType] = useState("")
+
     return (
         <form action="" className="flex flex-col space-y-3 mt-5">
             <Input
