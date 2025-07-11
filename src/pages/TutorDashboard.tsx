@@ -1,8 +1,7 @@
-import React from 'react';
-import AppNav from '../components/AppNav';
-import Classes from '../components/Classes';
-import StatsCard from '../components/ui/StatsCard';
-import StudentListWrapper from '../components/StudentList'; 
+import AppNav from "../components/AppNav";
+import Classes from "../components/Classes";
+import StatsCard from "../components/ui/StatsCard";
+import StudentList from "../components/studentList/studentList"; 
 
 const statsData = [
     { amount: 3, description: "Active Classes" },
@@ -17,22 +16,21 @@ const TutorDashboard = () => {
             <AppNav userName="John Doe" />
 
             <div className="mt-4 flex space-x-2">
-                {statsData.map((stat) => (
+                {statsData.map((stat, index) => (
                     <StatsCard
-                        key={stat.description}  // added key here
+                        key={index}
                         amount={stat.amount}
                         description={stat.description}
                     />
                 ))}
             </div>
 
-            <div className="flex space-x-2 mt-4">
+            <div className="mt-6">
                 <Classes />
             </div>
 
-            {/* Add the student list below */}
             <div className="mt-6">
-                <StudentListWrapper />
+                <StudentList /> {/* ✅ Added student list here */}
             </div>
         </div>
     );
